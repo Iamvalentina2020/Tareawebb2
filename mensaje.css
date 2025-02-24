@@ -1,0 +1,102 @@
+.mensaje {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #f9f9f9, #ececec);
+  }
+  
+  .mensaje__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .mensaje__item {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 2px solid transparent;
+  }
+  
+  .mensaje__item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mensaje__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(226,25,25,0.4), rgba(57,55,55,0.4));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+  
+  .mensaje__item:hover::before {
+    opacity: 1;
+  }
+  
+  .mensaje__item__titulo {
+    position: relative;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent-color, #e21919);
+    margin-bottom: 0.75rem;
+  }
+  
+  .mensaje__item__titulo::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--accent-color, #e21919);
+    border-radius: 2px;
+  }
+  
+  .mensaje__item__texto {
+    position: relative;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  @media (min-width: 768px) {
+    .mensaje__item {
+      max-width: 280px;
+      padding: 2rem 1.5rem;
+    }
+    .mensaje__item__titulo {
+      font-size: 1.3rem;
+    }
+    .mensaje__item__texto {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .mensaje {
+      padding: 4rem 2rem;
+    }
+  }
+  
