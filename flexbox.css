@@ -1,0 +1,193 @@
+:root {
+    --primary-color: #e21919;
+    --secondary-color: #393737;
+    --accent-color: #cc3366;
+    --text-color: #f5f5f5;
+    --light-color: #ffffff;
+    --background-color: #1a1a1a;
+    --transition-speed: 0.3s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--secondary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .header:hover {
+    transform: scale(1.02);
+  }
+  
+  .header__logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .header__nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .header__nav a {
+    text-decoration: none;
+    color: var(--light-color);
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+  }
+  
+  .header__nav a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .main {
+    padding: 4rem 0;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .product-card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-card__content {
+    padding: 1rem;
+  }
+  
+  .product-card__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-card__desc {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-card__price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card__button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .product-card__button:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+  }
+  
+  .footer {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer__nav a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-size: 0.9rem;
+    transition: color var(--transition-speed) ease;
+  }
+  
+  .footer__nav a:hover {
+    color: var(--primary-color);
+  }
+  
+  .footer__copy {
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .products {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
